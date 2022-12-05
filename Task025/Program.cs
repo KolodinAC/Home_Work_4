@@ -7,7 +7,7 @@ double result = RiseNumbToPow(numbA, numbA);
 Console.WriteLine(result);
 
 
-// Методы:
+// Methods:
 
 double UserInputA()
 {
@@ -42,8 +42,8 @@ double UserInputB()
 double RiseNumbToPow(double numbA, double numB)
 {
     double num = numbA;
-    double pow = numB;
-    double res = 0;
+    double pow = numbB;
+    double res = 1;
     
     for (int i = 1; i <= pow; i++)
     {
