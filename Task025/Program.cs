@@ -1,32 +1,18 @@
 ﻿// Напишите программу, которая принимает на вход два числа (A и B) и 
 // метод который возводит число A в натуральную степень B.
 
-double numbA = UserInputA();
-double numbB = UserInputB();
+Console.Write("Введите число:  ");
+double numbA = UserInput();
+Console.Write("Введите степень для числа:  ");
+double numbB = UserInput();
 double result = RiseNumbToPow(numbA, numbA);
-Console.WriteLine(result);
+Console.WriteLine($"Результат возведения числа {numbA} в степень {numbB} равняется:  " + result);
 
 
 // Methods:
 
-double UserInputA()
+double UserInput()
 {
-    Console.WriteLine("Введите первое число:");
-    bool isNum = double.TryParse(Console.ReadLine(), out double num);
-    if (isNum)
-    {
-        return num;
-    }
-    else
-    {
-        Console.WriteLine("Вы ввели некорректное значение");
-        return -1;
-    }
-}
-
-double UserInputB()
-{
-    Console.WriteLine("Введите второе число:");
     bool isNum = double.TryParse(Console.ReadLine(), out double num);
     if (isNum)
     {
