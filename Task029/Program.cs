@@ -1,10 +1,8 @@
 ﻿// Задача 29: Напишите программу, которая задаёт массив из N элементов и выводит их на экран.
 
 int userLength = UserInputArrayLength();
-
 int[] array = new int[userLength];
-
-GetArrayFromUser();
+GetArrayFromUser(array);
 PrintArray(array);
 
 
@@ -27,13 +25,14 @@ int UserInputArrayLength()
     }
 }
 
-void GetArrayFromUser()
+int[] GetArrayFromUser(int[] collection)
 {
-    for (int i = 0; i < array.Length; i++)
+    for (int i = 0; i < collection.Length; i++)
     {
         Console.Write($"\nВведите элемент массива с индексом {i}:\t ");
-        array[i] = int.Parse(Console.ReadLine());
+        collection[i] = int.Parse(Console.ReadLine());
     }
+    return collection;
 }
 
 void PrintArray(int[] col)
